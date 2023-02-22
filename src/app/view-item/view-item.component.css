@@ -1,0 +1,25 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.area {
+    padding: 15px;
+}
+.button {
+    width: 100%;
+}
+.separator {
+    height: 20px;
+}
+.rows {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+li { list-style-type: none;}

@@ -1,0 +1,28 @@
+<div>
+    <div class="subContainer"> 
+      <div class="column">
+        <ul>
+          <li *ngFor="let dos of todos">
+            <div class="column">
+              <b>Title</b>
+              <input type="text" [(ngModel)]="dos.title"/>
+              <div class="separator"></div>
+              <b>Description</b>
+                <input type="text" [(ngModel)]="dos.desc"/>
+                <div class="separator"></div>
+                  <b>completed?</b>
+                  <p class='todos'>{{ dos.done }}</p>
+                    </div>
+                      <div class="rows">
+                        <div class="separator"></div>
+                      <button mat-raised-button (click)="onDelete(dos.id)">Delete</button>
+                    <div class="separator"></div>
+                  <button mat-raised-button (click)="onUpdate(dos)">Update</button>
+                <div class="separator"></div>
+              <button mat-raised-button (click)="onDone(dos.id)">Complete</button>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>

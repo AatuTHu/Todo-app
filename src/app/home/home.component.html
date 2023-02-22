@@ -1,0 +1,17 @@
+<div class="mainContainer">
+    <div class="sideNav">
+      <h1>Todo</h1>
+      <ul>
+        <li *ngFor="let dos of todos">
+          <div>
+            <p [style.textDecoration]="dos.done ? 'line-through' : 'none'" class = 'todos' (click)="onOpenTodo(dos)">{{ dos.title }}</p>
+          </div>
+        </li>
+      </ul>
+      <button mat-raised-button (click)="onAddItem()">Add Todo</button>
+    </div>
+    <div class="mainContent">
+      <h1>View</h1>
+        <router-outlet></router-outlet>
+    </div>
+  </div>
