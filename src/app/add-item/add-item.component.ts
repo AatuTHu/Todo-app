@@ -24,7 +24,7 @@ export class AddItemComponent {
   }
 
   form = this.formBuilder.group({
-    id: Math.floor(Math.random() *1024)*32,
+    id: Math.floor(Math.random() *1024)*32, //somewhat random id
     title:'',
     desc:'',
     done: false

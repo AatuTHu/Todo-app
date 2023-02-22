@@ -18,15 +18,15 @@ export class HomeComponent implements OnInit {
               private router: Router,
               private todoService : TodoService) {}
 
-  onOpenTodo(dos: any) {
+  onOpenTodo(dos: any) { //send clicked todo and set its name on the url
     this.router.navigate([dos.title], { state: { dos: dos } });
   }
 
-  onAddItem() {
+  onAddItem() { //opens the dialog with the form
     this.matDialog.open(AddItemComponent)
   }
 
-  ngOnInit() {
+  ngOnInit() { //get todo items from service
     this.todos = this.todoService.getTodos();
   }
 }

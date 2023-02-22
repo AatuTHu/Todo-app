@@ -35,7 +35,7 @@ export class ViewItemComponent implements OnInit {
   onDone(id : number) {
     this.todoService.toggleComplete(id);
 
-    if(this.todos[0].done == false) {
+    if(this.todos[0].done == false) { //visual update only
       this.todos[0].done = true;
     } else {
       this.todos[0].done = false;
