@@ -13,13 +13,13 @@
                   <b>completed?</b>
                   <p class='todos'>{{ dos.done }}</p>
                     </div>
-                      <div class="rows">
+                      <div class="columns">
                         <div class="separator"></div>
-                      <button mat-raised-button (click)="onDelete(dos.id)">Delete</button>
+                      <button mat-raised-button color="primary" (click)="onDelete(dos.id)">Delete</button>
                     <div class="separator"></div>
-                  <button mat-raised-button (click)="onUpdate(dos)">Update</button>
+                  <button mat-raised-button color="primary" (click)="onUpdate(dos)">Update</button>
                 <div class="separator"></div>
-              <button mat-raised-button (click)="onDone(dos.id)">Complete</button>
+              <button mat-raised-button color="primary" (click)="onDone(dos.id)">Complete</button>
             </div>
           </li>
       </ul>

@@ -12,33 +12,21 @@ export class TodoService {
     this.todos.push(todo);
   }
 
-  getTodoById(index: number) : Todo {
-    let foundIndex : any;
-    for(let i = 0; i < this.todos.length; i++) {
-      if(this.todos[i].id == index){
-        foundIndex = i;
-        break;
-    }
-  }
-    return this.todos[foundIndex];
+  getTodoById(id: number) : any {
+    let found = this.todos.find(todo => todo.id === id);
+    return found;
   }
 
   getTodos() {
     return this.todos;
   }
 
-  toggleComplete(index: number) {
-    let foundIndex : any;
-      for(let i = 0; i < this.todos.length; i++) {
-        if(this.todos[i].id == index){
-          foundIndex = i;
-          break;
-      }
-  } 
-    if(this.todos[foundIndex].done == false) {
-      this.todos[foundIndex].done = true;
+  toggleComplete(id: number) {
+    let foundid = this.todos.findIndex(i => i.id === id);
+    if(this.todos[foundid].done) {
+      this.todos[foundid].done = false;
     } else {
-      this.todos[foundIndex].done = false;
+      this.todos[foundid].done = true;
     } 
   }
 
@@ -51,7 +39,7 @@ export class TodoService {
  }
 
   deleteTodo(id: number) : void {
-    const index = this.todos.findIndex(todo => todo.id === id);
+    const index = this.todos.findIndex(i => i.id === id);
     if (index !== -1) {
       this.todos.splice(index, 1);
     }

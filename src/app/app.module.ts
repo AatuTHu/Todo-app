@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewItemComponent } from './view-item/view-item.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,10 @@ import { ViewItemComponent } from './view-item/view-item.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatListModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatSidenavModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule

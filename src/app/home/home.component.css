@@ -1,36 +1,17 @@
-.mainContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px;
+.todos {
     padding: 10px;
+    font-size: 30px;
   }
 
-  .sideNav {
-    display: flex;
+  .sidenav {
+    width: 300px;
     padding: 10px;
-    width: 25%;
-    flex-direction: column;
-    border: 2px solid black;
-    align-items: center;
+    text-align: center;
   }
 
-  .mainContent {
-    display: flex;
-    padding: 10px;
-    width: 70%;
-    flex-direction: column;
-    border: 2px solid black;
-    align-items: center;
-  }
-
-  .rows {
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .todos {
-    font-size: 25px;
+  .example-container {
+    width: 1000px;
+    height: 900px;
+    margin: 10px;
+    border: 1px solid #555;
   }

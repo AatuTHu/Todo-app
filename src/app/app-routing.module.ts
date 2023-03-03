@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewItemComponent } from './view-item/view-item.component';
 
 const routes: Routes = [{
-  path: ':id',
+  path: ':title',
   component: ViewItemComponent
 }];
 

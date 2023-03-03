@@ -1,17 +1,14 @@
-<div class="mainContainer">
-    <div class="sideNav">
-      <h1>Todo</h1>
-      <ul>
-        <li *ngFor="let dos of todos">
-          <div>
-            <p [style.textDecoration]="dos.done ? 'line-through' : 'none'" class = 'todos' (click)="onOpenTodo(dos)">{{ dos.title }}</p>
-          </div>
-        </li>
-      </ul>
-      <button mat-raised-button (click)="onAddItem()">Add Todo</button>
-    </div>
-    <div class="mainContent">
-      <h1>View</h1>
-        <router-outlet></router-outlet>
-    </div>
-  </div>
+<mat-sidenav-container class="example-container">
+
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
+    <mat-nav-list *ngFor="let dos of todos">
+        <p [style.textDecoration]="dos.done ? 'line-through' : 'none'" class = 'todos' (click)="onOpenTodo(dos)">{{ dos.title }}</p>
+    </mat-nav-list>
+      <button mat-raised-button color="primary" (click)="onAddItem()">Add Todo</button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

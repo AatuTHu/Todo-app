@@ -14,11 +14,10 @@
 .separator {
     height: 20px;
 }
-.rows {
+.columns {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 15px;
-    justify-content: space-between;
     cursor: pointer;
   }
 
